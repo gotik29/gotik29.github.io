@@ -349,7 +349,7 @@ body._lock {
   text-align: left;
 }
 .mainblock__line {
-  width: 480px;
+  width: 500px;
   height: 200px;
   border-left: 0.1px solid var(--lines);
   position: absolute;
@@ -376,12 +376,12 @@ body._lock {
   animation-delay: 2s;
 }
 .mainblock__line2 {
-  width: 530px;
+  width: 50%;
   height: 200px;
   border-right: 0.1px solid var(--lines);
   position: absolute;
   bottom: 100px;
-  right: 529.6px;
+  right: 529px;
   animation: liney 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 .mainblock__line2b {
