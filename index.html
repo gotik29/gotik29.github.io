@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220312170925">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220314005856">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,11 +60,18 @@
 				</div>
 			</section>
 			<section class="secondblock">
-				<div class="secondblock__item"></div>
-				<form class="user-form" id="form">
-					<input type="text" id="search" placeholder="Search a Github User" />
-				</form>
-				<div id="card"></div>
+				<div class="secondblock__item">
+					<h2 class="secondblock__title">Portfolio</h2>
+				</div>
+				<div class="secondblock__flex" data-scroll>
+					<p class="secondblock__subtitle">
+						You can see our portfolio, by typing gotik29 here
+					</p>
+					<form class="user-form" id="form">
+						<input type="text" id="search" placeholder="Search a Github User" />
+					</form>
+					<div id="card"></div>
+				</div>
 			</section>
 		</main>
 		<footer class="footer">
@@ -83,8 +90,16 @@
 	</div>
 </div>
  -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js?_v=20220312170925" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
-	<script src="js/app.min.js?_v=20220312170925"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js?_v=20220314005856" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20220314005856"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.js?_v=20220314005856" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+	<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js?_v=20220314005856"></script>
+	<script>
+		ScrollOut({
+			targets: "form, input, h2",
+		});
+	</script>
 
 </body>
 
