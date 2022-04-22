@@ -2,11 +2,11 @@
 <html lang="ru">
 
 <head>
-	<title>Lorem</title>
+	<title>Главная</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220314005856">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220422173723">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,62 +15,25 @@
 <body>
 	<div class="wrapper">
 		<header class="header">
-			<div class="header__container">
-				<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="" class="header__logo" /></picture>
-				<div class="header__menu menu">
-					<div class="menu__icon">
-						<span></span>
-					</div>
-					<nav class="menu__body">
-						<ul class="menu__list">
-							<li>
-								<a href="" class="menu__link">Chapter №1</a>
-							</li>
-							<li>
-								<a href="" class="menu__link">Chapter №2</a>
-							</li>
-							<li>
-								<a href="" class="menu__link">Chapter №3</a>
-							</li>
-							<li>
-								<a href="" class="menu__link">Chapter №4</a>
-							</li>
-						</ul>
-					</nav>
+			<div class="header__content">
+				<div class="header__left left">
+					<a href="" class="left__logo">tRavel <span>WW</span></a>
+				</div>
+				<div class="header__right right">
+					<a href="" class="right__button">About Us</a>
 				</div>
 			</div>
 		</header>
 
 		<main class="page">
+			<div class="main-bg">
+				<img class="main-bg__img" src="img/worldmain.svg" alt="" />
+			</div>
 			<section class="mainblock">
-				<div class="container">
-					<div class="mainblock__item">
-						<canvas class="mainblock__line"></canvas>
-						<canvas class="mainblock__lineb"></canvas>
-						<canvas class="mainblock__liner"></canvas>
-						<h1 class="mainblock__title">Lorem ipsum</h1>
-						<canvas class="mainblock__line2"></canvas>
-						<canvas class="mainblock__line2b"></canvas>
-						<canvas class="mainblock__line2l"></canvas>
-						<p class="mainblock__subtitle">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Asperiores
-						</p>
+				<div class="mainblock__content">
+					<div class="container">
+						<div class="mainblock__title"></div>
 					</div>
-				</div>
-			</section>
-			<section class="secondblock">
-				<div class="secondblock__item">
-					<h2 class="secondblock__title">Portfolio</h2>
-				</div>
-				<div class="secondblock__flex" data-scroll>
-					<p class="secondblock__subtitle">
-						You can see our portfolio, by typing gotik29 here
-					</p>
-					<form class="user-form" id="form">
-						<input type="text" id="search" placeholder="Search a Github User" />
-					</form>
-					<div id="card"></div>
 				</div>
 			</section>
 		</main>
@@ -90,17 +53,7 @@
 	</div>
 </div>
  -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js?_v=20220314005856" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
-	<script src="js/app.min.js?_v=20220314005856"></script>
-	<script src="https://code.jquery.com/jquery-3.6.0.js?_v=20220314005856" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-
-	<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js?_v=20220314005856"></script>
-	<script>
-		ScrollOut({
-			targets: "form, input, h2",
-		});
-	</script>
-
+	<script src="js/app.min.js?_v=20220422173723"></script>
 </body>
 
 </html>
