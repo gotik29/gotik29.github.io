@@ -22,6 +22,19 @@
             }));
         }
     }), 0);
+    let scrollpos = window.scrollY;
+    const mainblock__subtitle = document.querySelector(".mainblock__subtitle");
+    const mainblock__title = document.querySelector(".mainblock__title");
+    const scrolChange = 110;
+    const add_class_on_scroll_title = () => mainblock__title.classList.add("active-when-scroll-title");
+    const remove_class_on_scroll_title = () => mainblock__title.classList.remove("active-when-scroll-title");
+    const add_class_on_scroll_subtitle = () => mainblock__subtitle.classList.add("active-when-scroll-subtitle");
+    const remove_class_on_scroll_subtitle = () => mainblock__subtitle.classList.remove("active-when-scroll-subtitle");
+    window.addEventListener("scroll", (function() {
+        scrollpos = window.scrollY;
+        if (scrollpos >= scrolChange) add_class_on_scroll_title(); else remove_class_on_scroll_title();
+        if (scrollpos >= scrolChange) add_class_on_scroll_subtitle(); else remove_class_on_scroll_subtitle();
+    }));
     window["FLS"] = true;
     isWebp();
 })();
