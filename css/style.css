@@ -442,14 +442,14 @@ body {
   border: 1px solid red;
 }
 
-@media (max-width: 75em) {
+@media (min-width: 75em) {
   .dots .__marker {
     top: 55.5%;
     left: 29.3%;
   }
   .dots .__marker1 {
     top: 46.5%;
-    left: 50.3%;
+    left: 29.3%;
   }
 }
 @-webkit-keyframes scale-in-center {
