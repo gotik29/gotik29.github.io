@@ -343,7 +343,7 @@ body {
   width: 330px;
   height: 320px;
   border-radius: 15px;
-  padding: 32px 0px 0px 10px;
+  padding: 36px 0px 0px 10px;
   color: #fff;
   position: absolute;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -370,7 +370,7 @@ body {
   width: 330px;
   height: 270px;
   border-radius: 15px;
-  padding: 32px 0px 0px 10px;
+  padding: 36px 0px 0px 10px;
   color: #fff;
   position: absolute;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -403,7 +403,7 @@ body {
 }
 .dots__title {
   font-family: "Raleway", sans-serif;
-  font-size: calc(var(--sizeindex) * 3);
+  font-size: 64px;
   font-weight: 900;
   display: inline-block;
   background: linear-gradient(45deg, #8b008b, tomato, #ee82ee);
@@ -413,7 +413,7 @@ body {
 }
 .dots__title1 {
   font-family: "Raleway", sans-serif;
-  font-size: calc(var(--sizeindex) * 3);
+  font-size: 64px;
   font-weight: 900;
   display: inline-block;
   background: linear-gradient(45deg, #52c234, #0f9b0f, #061700);
@@ -442,6 +442,17 @@ body {
   border: 1px solid red;
 }
 
+@media (max-width: 75em) {
+  .dots__marker {
+    top: 55.5%;
+    left: 29.3%;
+  }
+
+  .dots__marker1 {
+    top: 46.5%;
+    left: 29.3%;
+  }
+}
 @-webkit-keyframes scale-in-center {
   0% {
     -webkit-transform: scale(0);
