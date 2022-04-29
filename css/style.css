@@ -443,12 +443,11 @@ body {
 }
 
 @media (max-width: 75em) {
-  .dots__marker {
+  .dots .__marker {
     top: 55.5%;
     left: 29.3%;
   }
-
-  .dots__marker1 {
+  .dots .__marker1 {
     top: 46.5%;
     left: 29.3%;
   }
