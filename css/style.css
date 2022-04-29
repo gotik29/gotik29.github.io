@@ -442,12 +442,12 @@ body {
   border: 1px solid red;
 }
 
-@media (min-width: 75em) {
-  .dots .__marker {
+@media (max-width: 75em) {
+  .dots__marker {
     top: 55.5%;
     left: 29.3%;
   }
-  .dots .__marker1 {
+  .dots__marker1 {
     top: 46.5%;
     left: 29.3%;
   }
