@@ -442,14 +442,28 @@ body {
   border: 1px solid red;
 }
 
-@media (max-width: 75em) {
+@media (max-width: 47.99875em) {
   .dots__marker {
-    top: 55.5%;
-    left: 29.3%;
+    top: 53%;
+    left: 23%;
   }
   .dots__marker1 {
-    top: 46.5%;
-    left: 29.3%;
+    top: 49.7%;
+    left: 23%;
+  }
+  .dots__img {
+    height: 10px;
+    width: 10px;
+  }
+}
+@media (min-width: 75em) {
+  .dots__marker {
+    top: 50%;
+    left: 22%;
+  }
+  .dots__marker1 {
+    top: 38%;
+    left: 20%;
   }
 }
 @-webkit-keyframes scale-in-center {
