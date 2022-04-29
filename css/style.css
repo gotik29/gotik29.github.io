@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;600;700;900&family=Ubuntu:wght@300;400;700&display=swap);
 @charset "UTF-8";
 * {
   padding: 0px;
@@ -21,7 +21,7 @@ body {
 body {
   color: #000;
   line-height: 1;
-  font-family: "";
+  font-family: "Raleway', sans-serif";
   font-size: 0.875rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -33,7 +33,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "";
+  font-family: "Raleway', sans-serif";
   font-size: inherit;
 }
 
@@ -74,6 +74,9 @@ h6 {
   font-size: inherit;
 }
 
+body {
+  background-color: rgb(21, 21, 21);
+}
 .lock body {
   overflow: hidden;
   touch-action: none;
@@ -160,7 +163,7 @@ h6 {
 .header__left:hover span {
   color: var(--header-color);
 }
-.header__right {
+.header__button {
   background-color: var(--header-color);
   color: #fff;
   display: inline-block;
@@ -171,7 +174,7 @@ h6 {
   transition: background-color 0.5s ease;
   font-family: "Ubuntu", sans-serif;
 }
-.header__right:hover {
+.header__button:hover {
   color: #fff;
   text-decoration: none;
   background-color: #cc0000;
@@ -234,6 +237,9 @@ h6 {
 :root {
   --time_title: 1s;
   --time_subtitle: 1s;
+  --dark: #070707;
+  --sizeindex: calc(1vw + 1vh);
+  --transition: 0.75s cubic-bezier(0.2, 0.6, 0, 1);
 }
 
 ::selection {
@@ -243,6 +249,7 @@ h6 {
 
 .page {
   background-color: rgb(21, 21, 21);
+  scroll-behavior: smooth;
 }
 
 .main-bg__img {
@@ -282,13 +289,13 @@ h6 {
 }
 
 .active-when-scroll-title {
-  -webkit-animation: slide-out-left 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: slide-out-left 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  -webkit-animation: slide-out-left 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: slide-out-left 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 .active-when-scroll-subtitle {
-  -webkit-animation: slide-out-bottom 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: slide-out-bottom 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  -webkit-animation: slide-out-bottom 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: slide-out-bottom 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 @media (max-width: 47.99875em) {
@@ -303,6 +310,184 @@ h6 {
   }
   .mainblock__text {
     font-size: 32px;
+  }
+}
+.dots {
+  height: 100vh;
+}
+.dots__marker {
+  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  position: fixed;
+  top: 55%;
+  left: 26.7%;
+}
+.dots__marker:hover .dots__card {
+  visibility: visible;
+  opacity: 1;
+}
+.dots__marker1 {
+  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  position: fixed;
+  top: 46%;
+  left: 26.7%;
+}
+.dots__marker1:hover .dots__card1 {
+  visibility: visible;
+  opacity: 1;
+}
+.dots__card {
+  font-family: "Ubuntu", sans-serif;
+  visibility: hidden;
+  width: 330px;
+  height: 320px;
+  border-radius: 15px;
+  padding: 32px 0px 0px 10px;
+  color: #fff;
+  position: absolute;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+  top: -100px;
+  left: 110%;
+}
+.dots__card::after {
+  content: " ";
+  position: absolute;
+  top: 37%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent;
+}
+.dots__card1 {
+  font-family: "Ubuntu", sans-serif;
+  visibility: hidden;
+  width: 330px;
+  height: 270px;
+  border-radius: 15px;
+  padding: 32px 0px 0px 10px;
+  color: #fff;
+  position: absolute;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+  top: -100px;
+  left: 110%;
+}
+.dots__card1::after {
+  content: " ";
+  position: absolute;
+  top: 44%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent;
+}
+.dots__number {
+  font-weight: 700;
+  position: absolute;
+  top: 5px;
+  right: -5px;
+  font-size: 7em;
+  padding: 0px 10px 0px 0px;
+  color: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+.dots__title {
+  font-family: "Raleway", sans-serif;
+  font-size: calc(var(--sizeindex) * 3);
+  font-weight: 900;
+  display: inline-block;
+  background: linear-gradient(45deg, #8b008b, tomato, #ee82ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0px 0px 10px 0px;
+}
+.dots__title1 {
+  font-family: "Raleway", sans-serif;
+  font-size: calc(var(--sizeindex) * 3);
+  font-weight: 900;
+  display: inline-block;
+  background: linear-gradient(45deg, #52c234, #0f9b0f, #061700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0px 0px 10px 0px;
+}
+.dots__subtitle {
+  font-size: 28px;
+  font-weight: 400;
+  text-align-last: left;
+}
+
+.active-when-scroll-marker {
+  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.active-when-scroll-marker1 {
+  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.test {
+  height: 100vh;
+  border: 1px solid red;
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+@keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
   }
 }
 @-webkit-keyframes slide-out-left {
