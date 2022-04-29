@@ -459,11 +459,11 @@ body {
 @media (min-width: 75em) {
   .dots__marker {
     top: 50%;
-    left: 22%;
+    left: 25%;
   }
   .dots__marker1 {
     top: 38%;
-    left: 20%;
+    left: 23%;
   }
 }
 @-webkit-keyframes scale-in-center {
