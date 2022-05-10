@@ -247,6 +247,11 @@ body {
   color: white;
 }
 
+/*Убрать полосу прокрутки для всей страницы*/
+::-webkit-scrollbar {
+  width: 0;
+}
+
 .page {
   background-color: rgb(21, 21, 21);
   scroll-behavior: smooth;
@@ -337,6 +342,62 @@ body {
   visibility: visible;
   opacity: 1;
 }
+.dots__marker2 {
+  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  position: fixed;
+  top: 46%;
+  left: 52%;
+}
+.dots__marker3 {
+  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  position: fixed;
+  top: 46%;
+  left: 70%;
+}
+.dots__marker4 {
+  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  position: fixed;
+  top: 46%;
+  left: 80%;
+}
+.dots__marker5 {
+  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  position: fixed;
+  top: 70%;
+  left: 52%;
+}
+.dots__marker6 {
+  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  position: fixed;
+  top: 60%;
+  left: 70%;
+}
+.dots__marker7 {
+  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  position: fixed;
+  top: 60%;
+  left: 50%;
+}
+.dots__marker8 {
+  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  position: fixed;
+  top: 40%;
+  left: 70%;
+}
+.dots__marker9 {
+  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  position: fixed;
+  top: 30%;
+  left: 60%;
+}
 .dots__card {
   font-family: "Ubuntu", sans-serif;
   visibility: hidden;
@@ -398,7 +459,7 @@ body {
   right: -5px;
   font-size: 7em;
   padding: 0px 10px 0px 0px;
-  color: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.4);
   pointer-events: none;
 }
 .dots__title {
@@ -438,8 +499,13 @@ body {
 }
 
 .test {
+  height: 70vh;
+}
+
+.test1 {
   height: 100vh;
-  border: 1px solid red;
+  background-color: #000;
+  position: relative;
 }
 
 @media (max-width: 47.99875em) {
