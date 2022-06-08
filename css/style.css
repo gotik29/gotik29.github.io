@@ -124,10 +124,6 @@ body {
   object-fit: contain;
 }
 
-:root {
-  --header-color: red;
-}
-
 .header {
   position: absolute;
   top: 0;
@@ -162,10 +158,10 @@ body {
   color: #fff;
 }
 .header__left:hover span {
-  color: var(--header-color);
+  color: #440dfe;
 }
 .header__button {
-  background-color: var(--header-color);
+  background-color: #440dfe;
   color: #fff;
   display: inline-block;
   padding: 15px 30px;
@@ -178,7 +174,7 @@ body {
 .header__button:hover {
   color: #fff;
   text-decoration: none;
-  background-color: #cc0000;
+  background-color: #2601a4;
 }
 
 @media (max-width: 75em) {
@@ -235,18 +231,9 @@ body {
 	}
 }
 */
-:root {
-  --time_title: 1s;
-  --time_subtitle: 1s;
-  --dark: #070707;
-  --sizeindex: calc(1vw + 1vh);
-  --transition: 0.75s cubic-bezier(0.2, 0.6, 0, 1);
-  --main_color: red;
-}
-
 ::selection {
-  background-color: var(--main_color);
-  color: white;
+  background-color: #440dfe;
+  color: #fff;
 }
 
 ::-webkit-scrollbar {
@@ -260,7 +247,7 @@ body {
   top: 0;
   height: 2px;
   width: 0%;
-  background: var(--main_color);
+  background: #440dfe;
 }
 
 .page {
@@ -270,7 +257,7 @@ body {
 
 .inscription {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -283,15 +270,18 @@ body {
 }
 .inscription__title {
   padding: 0px 0px 30px 0px;
-  -webkit-animation: slide-in-left var(--time_title) cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-in-left var(--time_title) cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  color: #fff;
+  -webkit-animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .inscription__subtitle {
-  -webkit-animation: slide-in-bottom var(--time_subtitle) cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-in-bottom var(--time_subtitle) cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  color: #fff;
+  -webkit-animation: scale-in-ver-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-ver-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .main {
+  top: 10px;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -315,13 +305,11 @@ body {
   height: 100%;
 }
 
-.dots {
-  font-family: "Raleway", sans-serif;
-}
 .dots__dot-0 {
   width: 0;
   height: 0;
   position: absolute;
+  font-family: "Raleway", sans-serif;
   left: 24.4%;
   top: 57.5%;
   -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
@@ -339,115 +327,6 @@ body {
   height: 36px;
 }
 
-.dots {
-  height: 100vh;
-}
-.dots__marker {
-  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  position: fixed;
-  top: 55%;
-  left: 26.7%;
-}
-.dots__marker1 {
-  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  position: fixed;
-  top: 46%;
-  left: 26.7%;
-}
-.dots__marker1:hover .dots__card1 {
-  visibility: visible;
-  opacity: 1;
-}
-.dots__marker2 {
-  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  position: fixed;
-  top: 46%;
-  left: 52%;
-}
-.dots__marker2:hover .dots__card1 {
-  visibility: visible;
-  opacity: 1;
-}
-.dots__marker3 {
-  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  position: fixed;
-  top: 46%;
-  left: 70%;
-}
-.dots__marker3:hover .dots__card {
-  visibility: visible;
-  opacity: 1;
-}
-.dots__marker4 {
-  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  position: fixed;
-  top: 46%;
-  left: 80%;
-}
-.dots__marker4:hover .dots__card {
-  visibility: visible;
-  opacity: 1;
-}
-.dots__marker5 {
-  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  position: fixed;
-  top: 70%;
-  left: 52%;
-}
-.dots__marker5:hover .dots__card {
-  visibility: visible;
-  opacity: 1;
-}
-.dots__marker6 {
-  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  position: fixed;
-  top: 60%;
-  left: 70%;
-}
-.dots__marker6:hover .dots__card {
-  visibility: visible;
-  opacity: 1;
-}
-.dots__marker7 {
-  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  position: fixed;
-  top: 60%;
-  left: 50%;
-}
-.dots__marker7:hover .dots__card {
-  visibility: visible;
-  opacity: 1;
-}
-.dots__marker8 {
-  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  position: fixed;
-  top: 40%;
-  left: 70%;
-}
-.dots__marker8:hover .dots__card {
-  visibility: visible;
-  opacity: 1;
-}
-.dots__marker9 {
-  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  position: fixed;
-  top: 30%;
-  left: 60%;
-}
-.dots__marker9:hover .dots__card {
-  visibility: visible;
-  opacity: 1;
-}
 .dots__card {
   visibility: hidden;
   width: 330px;
@@ -560,8 +439,8 @@ body {
 }
 
 .active-when-scroll-subtitle {
-  -webkit-animation: slide-out-bottom 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: slide-out-bottom 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  -webkit-animation: scale-out-ver-bottom 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-ver-bottom 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 .active-when-scroll-marker {
@@ -646,28 +525,36 @@ body {
     opacity: 0;
   }
 }
-@-webkit-keyframes slide-out-bottom {
+@-webkit-keyframes scale-in-ver-bottom {
   0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateY(1000px);
-    transform: translateY(1000px);
-    opacity: 0;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
   }
 }
-@keyframes slide-out-bottom {
+@keyframes scale-in-ver-bottom {
   0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateY(1000px);
-    transform: translateY(1000px);
-    opacity: 0;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
   }
 }
 @-webkit-keyframes slide-in-left {
@@ -694,27 +581,35 @@ body {
     opacity: 1;
   }
 }
-@-webkit-keyframes slide-in-bottom {
+@-webkit-keyframes scale-out-ver-bottom {
   0% {
-    -webkit-transform: translateY(1000px);
-    transform: translateY(1000px);
-    opacity: 0;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
   }
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
     opacity: 1;
   }
 }
-@keyframes slide-in-bottom {
+@keyframes scale-out-ver-bottom {
   0% {
-    -webkit-transform: translateY(1000px);
-    transform: translateY(1000px);
-    opacity: 0;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
   }
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
     opacity: 1;
   }
 }
