@@ -296,7 +296,7 @@ body {
   width: 100%;
   height: 100%;
 }
-.main__container {
+.main__contain {
   width: 100%;
   height: 100%;
   display: flex;
@@ -304,7 +304,7 @@ body {
   align-items: center;
 }
 .main__content {
-  width: 1440px;
+  width: 1240px;
   position: sticky;
   display: flex;
   justify-content: center;
