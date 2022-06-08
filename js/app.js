@@ -23,8 +23,8 @@
         }
     }), 0);
     let scrollpos = window.scrollY;
-    const mainblock__subtitle = document.querySelector(".mainblock__subtitle");
-    const mainblock__title = document.querySelector(".mainblock__title");
+    const mainblock__subtitle = document.querySelector(".inscription__subtitle");
+    const mainblock__title = document.querySelector(".inscription__title");
     const scrolChange = 110;
     const add_class_on_scroll_title = () => mainblock__title.classList.add("active-when-scroll-title");
     const remove_class_on_scroll_title = () => mainblock__title.classList.remove("active-when-scroll-title");
@@ -37,7 +37,7 @@
         if (scrollpos >= scrolChange) add_class_on_scroll_subtitle(); else remove_class_on_scroll_subtitle();
     }));
     let scrollpos1 = window.scrollY;
-    const marker = document.querySelector(".dots__marker");
+    const marker = document.querySelector(".dots__dot-0");
     const scrolChange1 = 450;
     const add_class_on_scroll_marker = () => marker.classList.add("active-when-scroll-marker");
     const remove_class_on_scroll_marker = () => marker.classList.remove("active-when-scroll-marker");
@@ -112,6 +112,13 @@
         if (scrollpos6 >= scrolChange6) add_class_on_scroll_marker8(); else remove_class_on_scroll_marker8();
         if (scrollpos6 >= scrolChange6) add_class_on_scroll_marker9(); else remove_class_on_scroll_marker9();
     }));
+    function progressBar() {
+        let scroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = scroll / height * 100;
+        document.getElementById("progressBar").style.width = scrolled + "%";
+    }
+    window.addEventListener("scroll", progressBar);
     window["FLS"] = true;
     isWebp();
 })();

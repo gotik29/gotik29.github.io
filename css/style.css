@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;600;700;900&family=Ubuntu:wght@300;400;700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 @charset "UTF-8";
 * {
   padding: 0px;
@@ -19,9 +20,9 @@ body {
 }
 
 body {
-  color: #000;
+  color: #fff;
   line-height: 1;
-  font-family: "Raleway', sans-serif";
+  font-family: "Ubuntu";
   font-size: 0.875rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -33,7 +34,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Raleway', sans-serif";
+  font-family: "Ubuntu";
   font-size: inherit;
 }
 
@@ -133,6 +134,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 10;
+  font-family: "Ubuntu", sans-serif;
 }
 .header__content {
   max-width: 1200px;
@@ -150,7 +152,6 @@ body {
   font-weight: 700;
   padding: 10px;
   white-space: nowrap;
-  font-family: "Ubuntu", sans-serif;
 }
 .header__left span {
   font-weight: 300;
@@ -240,16 +241,26 @@ body {
   --dark: #070707;
   --sizeindex: calc(1vw + 1vh);
   --transition: 0.75s cubic-bezier(0.2, 0.6, 0, 1);
+  --main_color: red;
 }
 
 ::selection {
-  background-color: red;
+  background-color: var(--main_color);
   color: white;
 }
 
-/*Убрать полосу прокрутки для всей страницы*/
 ::-webkit-scrollbar {
   width: 0;
+}
+
+.progress-bar {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--main_color);
 }
 
 .page {
@@ -257,66 +268,77 @@ body {
   scroll-behavior: smooth;
 }
 
-.main-bg__img {
-  height: 100%;
-  width: 100%;
-  opacity: 0.7;
-  position: fixed;
-  top: 10px;
-  left: 0;
-}
-
-.mainblock {
-  height: 100vh;
-}
-.mainblock__content {
+.inscription {
   position: absolute;
+  z-index: 2;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.mainblock__text {
-  color: #fff;
-  font-family: "Ubuntu", sans-serif;
+.inscription__text {
   font-size: 38px;
   font-weight: 700;
 }
-.mainblock__title {
+.inscription__title {
   padding: 0px 0px 30px 0px;
   -webkit-animation: slide-in-left var(--time_title) cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-left var(--time_title) cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-.mainblock__subtitle {
+.inscription__subtitle {
   -webkit-animation: slide-in-bottom var(--time_subtitle) cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-bottom var(--time_subtitle) cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.active-when-scroll-title {
-  -webkit-animation: slide-out-left 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: slide-out-left 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+.main {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.main__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__content {
+  width: 1440px;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__bg {
+  width: 100%;
+  height: 100%;
 }
 
-.active-when-scroll-subtitle {
-  -webkit-animation: slide-out-bottom 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: slide-out-bottom 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+.dots {
+  font-family: "Raleway", sans-serif;
+}
+.dots__dot-0 {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 24.4%;
+  top: 57.5%;
+  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+.dots__dot-0:hover .dots__card {
+  visibility: visible;
+  opacity: 1;
+}
+.dots__img {
+  position: absolute;
+  bottom: 0;
+  right: -18px;
+  width: 36px;
+  height: 36px;
 }
 
-@media (max-width: 47.99875em) {
-  .mainblock__content {
-    position: absolute;
-    height: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    margin-left: 35px;
-  }
-  .mainblock__text {
-    font-size: 32px;
-  }
-}
 .dots {
   height: 100vh;
 }
@@ -326,10 +348,6 @@ body {
   position: fixed;
   top: 55%;
   left: 26.7%;
-}
-.dots__marker:hover .dots__card {
-  visibility: visible;
-  opacity: 1;
 }
 .dots__marker1 {
   -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
@@ -349,12 +367,20 @@ body {
   top: 46%;
   left: 52%;
 }
+.dots__marker2:hover .dots__card1 {
+  visibility: visible;
+  opacity: 1;
+}
 .dots__marker3 {
   -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   position: fixed;
   top: 46%;
   left: 70%;
+}
+.dots__marker3:hover .dots__card {
+  visibility: visible;
+  opacity: 1;
 }
 .dots__marker4 {
   -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
@@ -363,12 +389,20 @@ body {
   top: 46%;
   left: 80%;
 }
+.dots__marker4:hover .dots__card {
+  visibility: visible;
+  opacity: 1;
+}
 .dots__marker5 {
   -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   position: fixed;
   top: 70%;
   left: 52%;
+}
+.dots__marker5:hover .dots__card {
+  visibility: visible;
+  opacity: 1;
 }
 .dots__marker6 {
   -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
@@ -377,12 +411,20 @@ body {
   top: 60%;
   left: 70%;
 }
+.dots__marker6:hover .dots__card {
+  visibility: visible;
+  opacity: 1;
+}
 .dots__marker7 {
   -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   position: fixed;
   top: 60%;
   left: 50%;
+}
+.dots__marker7:hover .dots__card {
+  visibility: visible;
+  opacity: 1;
 }
 .dots__marker8 {
   -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
@@ -391,6 +433,10 @@ body {
   top: 40%;
   left: 70%;
 }
+.dots__marker8:hover .dots__card {
+  visibility: visible;
+  opacity: 1;
+}
 .dots__marker9 {
   -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
@@ -398,8 +444,11 @@ body {
   top: 30%;
   left: 60%;
 }
+.dots__marker9:hover .dots__card {
+  visibility: visible;
+  opacity: 1;
+}
 .dots__card {
-  font-family: "Ubuntu", sans-serif;
   visibility: hidden;
   width: 330px;
   height: 320px;
@@ -426,7 +475,6 @@ body {
   border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent;
 }
 .dots__card1 {
-  font-family: "Ubuntu", sans-serif;
   visibility: hidden;
   width: 330px;
   height: 270px;
@@ -463,7 +511,6 @@ body {
   pointer-events: none;
 }
 .dots__title {
-  font-family: "Raleway", sans-serif;
   font-size: 64px;
   font-weight: 900;
   display: inline-block;
@@ -473,7 +520,6 @@ body {
   padding: 0px 0px 10px 0px;
 }
 .dots__title1 {
-  font-family: "Raleway", sans-serif;
   font-size: 64px;
   font-weight: 900;
   display: inline-block;
@@ -508,30 +554,26 @@ body {
   position: relative;
 }
 
-@media (max-width: 47.99875em) {
-  .dots__marker {
-    top: 53%;
-    left: 23%;
-  }
-  .dots__marker1 {
-    top: 49.7%;
-    left: 23%;
-  }
-  .dots__img {
-    height: 10px;
-    width: 10px;
-  }
+.active-when-scroll-title {
+  -webkit-animation: slide-out-left 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: slide-out-left 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
-@media (min-width: 75em) {
-  .dots__marker {
-    top: 50%;
-    left: 25%;
-  }
-  .dots__marker1 {
-    top: 38%;
-    left: 23%;
-  }
+
+.active-when-scroll-subtitle {
+  -webkit-animation: slide-out-bottom 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: slide-out-bottom 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
+
+.active-when-scroll-marker {
+  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.active-when-scroll-marker1 {
+  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
 @-webkit-keyframes scale-in-center {
   0% {
     -webkit-transform: scale(0);
