@@ -6,13 +6,15 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220624161251">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220629235212">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+	<div class="cursor cursor--large"></div>
+	<div class="cursor cursor--small"></div>
 	<div id="page-preloader" class="preloader">
 		<svg class="preloader__container">
 			<circle class="preloader__circle" cx="70" cy="70" r="70" </svg>
@@ -21,7 +23,7 @@
 		<header class="header">
 			<div class="header__content">
 				<div class="header__left">
-					<a href="index.html" class="header__logo">tRavel <span>WW</span></a>
+					<a href="index.html" class="header__logo">tRavel <span class="ww">WW</span></a>
 				</div>
 				<div class="header__right">
 					<a href="aboutUs.html" class="header__button">About Us</a>
@@ -29,7 +31,11 @@
 			</div>
 		</header>
 
-		<main class="page"></main>
+		<main class="page">
+			<div onclick="scrollToTop()" class="scrolltotop">
+				<picture><source srcset="img/backToTop/up-arrow.webp" type="image/webp"><img class="scrolltotop__arrow" src="img/backToTop/up-arrow.png" alt="" /></picture>
+			</div>
+		</main>
 		<footer class="footer">
 			<div class="footer__container">
 			</div>
@@ -46,7 +52,7 @@
 	</div>
 </div>
  -->
-	<script src="js/app.min.js?_v=20220624161251"></script>
+	<script src="js/app.min.js?_v=20220629235212"></script>
 
 </body>
 

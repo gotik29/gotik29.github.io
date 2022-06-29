@@ -3128,6 +3128,12 @@
     gsap.registerPlugin(CSSPlugin);
     var gsapWithCSS = gsap.registerPlugin(CSSPlugin) || gsap;
     gsapWithCSS.core.Tween;
+    document.body.onload = function() {
+        setTimeout((() => {
+            var preloader = document.getElementById("page-preloader");
+            if (!preloader.classList.contains("done")) preloader.classList.add("done");
+        }), 1e3);
+    };
     function progressBar() {
         let scroll = document.body.scrollTop || document.documentElement.scrollTop;
         let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -3135,8 +3141,8 @@
         document.getElementById("progressBar").style.width = scrolled + "%";
     }
     window.addEventListener("scroll", progressBar);
-    const cursorOuter = document.querySelector(".cursor--large");
-    const cursorInner = document.querySelector(".cursor--small");
+    const cursorLarge = document.querySelector(".cursor--large");
+    const cursorSmall = document.querySelector(".cursor--small");
     let isStuck = false;
     let mouse = {
         x: -100,
@@ -3146,39 +3152,39 @@
     window.addEventListener("scroll", (function(e) {
         scrollHeight = window.scrollY;
     }));
-    let cursorOuterOriginalState = {
-        width: cursorOuter.getBoundingClientRect().width,
-        height: cursorOuter.getBoundingClientRect().height
+    let cursorLargeOriginalState = {
+        width: cursorLarge.getBoundingClientRect().width,
+        height: cursorLarge.getBoundingClientRect().height
     };
-    const buttons = document.querySelectorAll(".header__button");
+    const buttons = document.querySelectorAll(".header__button, .scrolltotop, .dots__img");
     buttons.forEach((button => {
         button.addEventListener("pointerenter", handleMouseEnter);
         button.addEventListener("pointerleave", handleMouseLeave);
     }));
     document.body.addEventListener("pointermove", updateCursorPosition);
     document.body.addEventListener("pointerdown", (() => {
-        gsapWithCSS.to(cursorInner, .15, {
+        gsapWithCSS.to(cursorSmall, .15, {
             scale: 2
         });
     }));
     document.body.addEventListener("pointerup", (() => {
-        gsapWithCSS.to(cursorInner, .15, {
+        gsapWithCSS.to(cursorSmall, .15, {
             scale: 1
         });
     }));
     function updateCursorPosition(e) {
-        mouse.x = e.pageX;
-        mouse.y = e.pageY;
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
     }
     function updateCursor() {
-        gsapWithCSS.set(cursorInner, {
+        gsapWithCSS.set(cursorSmall, {
             x: mouse.x,
             y: mouse.y
         });
-        if (!isStuck) gsapWithCSS.to(cursorOuter, {
+        if (!isStuck) gsapWithCSS.to(cursorLarge, {
             duration: .15,
-            x: mouse.x - cursorOuterOriginalState.width / 2,
-            y: mouse.y - cursorOuterOriginalState.height / 2
+            x: mouse.x - cursorLargeOriginalState.width / 2,
+            y: mouse.y - cursorLargeOriginalState.height / 2
         });
         requestAnimationFrame(updateCursor);
     }
@@ -3186,34 +3192,38 @@
     function handleMouseEnter(e) {
         isStuck = true;
         const targetBox = e.currentTarget.getBoundingClientRect();
-        gsapWithCSS.to(cursorOuter, .2, {
+        gsapWithCSS.to(cursorLarge, .2, {
             x: targetBox.left,
-            y: targetBox.top + scrollHeight,
+            y: targetBox.top,
             width: targetBox.width,
-            height: "50px",
-            borderRadius: "10em",
+            height: targetBox.height,
+            borderRadius: "1.5em",
             backgroundColor: "rgba(255, 255, 255, 0.1)"
         });
     }
     function handleMouseLeave(e) {
         isStuck = false;
-        gsapWithCSS.to(cursorOuter, .2, {
-            width: cursorOuterOriginalState.width,
-            height: cursorOuterOriginalState.width,
+        gsapWithCSS.to(cursorLarge, .2, {
+            width: cursorLargeOriginalState.width,
+            height: cursorLargeOriginalState.width,
             borderRadius: "50%",
             backgroundColor: "transparent"
         });
     }
-    document.body.onload = function() {
-        setTimeout((() => {
-            var preloader = document.getElementById("page-preloader");
-            if (!preloader.classList.contains("done")) preloader.classList.add("done");
-        }), 1e3);
-    };
+    let scrollpos0 = window.scrollY;
+    const backToTop = document.querySelector(".scrolltotop");
+    const scrolChange0 = 1e3;
+    const add_class_on_scroll_backToTop = () => backToTop.classList.add("active-when-scroll-backToTop");
+    const remove_class_on_scroll_backToTop = () => backToTop.classList.remove("active-when-scroll-backToTop");
+    window.addEventListener("scroll", (function() {
+        scrollpos0 = window.scrollY;
+        console.log(scrollpos0);
+        if (scrollpos0 >= scrolChange0) add_class_on_scroll_backToTop(); else remove_class_on_scroll_backToTop();
+    }));
     let scrollpos = window.scrollY;
     const mainblock__subtitle = document.querySelector(".inscription__subtitle");
     const mainblock__title = document.querySelector(".inscription__title");
-    const scrolChange = 110;
+    const scrolChange = 100;
     const add_class_on_scroll_title = () => mainblock__title.classList.add("active-when-scroll-title");
     const remove_class_on_scroll_title = () => mainblock__title.classList.remove("active-when-scroll-title");
     const add_class_on_scroll_subtitle = () => mainblock__subtitle.classList.add("active-when-scroll-subtitle");
@@ -3226,7 +3236,7 @@
     }));
     let scrollpos1 = window.scrollY;
     const marker = document.querySelector(".dots__dot-0");
-    const scrolChange1 = 450;
+    const scrolChange1 = 600;
     const add_class_on_scroll_marker = () => marker.classList.add("active-when-scroll-marker");
     const remove_class_on_scroll_marker = () => marker.classList.remove("active-when-scroll-marker");
     window.addEventListener("scroll", (function() {
@@ -3236,7 +3246,7 @@
     }));
     let scrollpos2 = window.scrollY;
     const marker1 = document.querySelector(".dots__dot-1");
-    const scrolChange2 = 700;
+    const scrolChange2 = 800;
     const add_class_on_scroll_marker1 = () => marker1.classList.add("active-when-scroll-marker");
     const remove_class_on_scroll_marker1 = () => marker1.classList.remove("active-when-scroll-marker");
     window.addEventListener("scroll", (function() {

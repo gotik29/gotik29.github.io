@@ -2,11 +2,11 @@
 <html lang="ru">
 
 <head>
-	<title>Главная</title>
+	<title>TravelWW</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220624161251">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220629235212">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +23,7 @@
 		<header class="header">
 			<div class="header__content">
 				<div class="header__left">
-					<a href="index.html" class="header__logo">tRavel <span>WW</span></a>
+					<a href="index.html" class="header__logo">tRavel <span class="ww">WW</span></a>
 				</div>
 				<div class="header__right">
 					<a href="aboutUs.html" class="header__button">About Us</a>
@@ -33,7 +33,7 @@
 
 		<main class="page">
 			<div class="progress-bar" id="progressBar"></div>
-			<section class="inscription">
+			<section class="inscription" id="test">
 				<div class="inscription__container">
 					<div class="inscription__text">
 						<div class="inscription__title">
@@ -87,6 +87,9 @@
 	<section class="test"></section>
 	<section class="test"></section>
 	<section class="test1"></section>
+	<button onclick="document.querySelector('#test').scrollIntoView({ behavior: 'smooth' });" id="#scrollToTop" class="scrolltotop">
+		<picture><source srcset="img/backToTop/up-arrow.webp" type="image/webp"><img class="scrolltotop__arrow" src="img/backToTop/up-arrow.png" alt=""></picture>
+	</button>
 	</main>
 	<footer class="footer">
 		<div class="footer__container">
@@ -104,7 +107,7 @@
 	</div>
 </div>
  -->
-	<script src="js/app.min.js?_v=20220624161251"></script>
+	<script src="js/app.min.js?_v=20220629235212"></script>
 
 </body>
 
