@@ -2,22 +2,26 @@
 <html lang="ru">
 
 <head>
-	<title>TravelWW</title>
+	<title>tRavelWW</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220629235212">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220705222334">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+	<!-- Cursor -->
 	<div class="cursor cursor--large"></div>
 	<div class="cursor cursor--small"></div>
-	<div id="page-preloader" class="preloader">
-		<svg class="preloader__container">
-			<circle class="preloader__circle" cx="70" cy="70" r="70" </svg>
+	<!-- Preloader -->
+	<div class="loading">
+		<div class="loading__percent">100%</div>
+		<div class="loading__progress-bar">
+			<div class="progress-bar__progress"></div>
+		</div>
 	</div>
 	<div class="wrapper">
 		<header class="header">
@@ -32,7 +36,9 @@
 		</header>
 
 		<main class="page">
+			<!-- Progress bar -->
 			<div class="progress-bar" id="progressBar"></div>
+			<!-- Inscription -->
 			<section class="inscription" id="test">
 				<div class="inscription__container">
 					<div class="inscription__text">
@@ -40,11 +46,12 @@
 							Stop dreaming, it's time to rest
 						</div>
 						<div class="inscription__subtitle">
-							Lorem ipsum dolor sit amet consectetur adipisicing
+							Do fun and safe tours with the #1 travel company
 						</div>
 					</div>
 				</div>
 			</section>
+			<!-- Main section -->
 			<section class="main">
 				<div class="main__contain">
 					<div class="main__content">
@@ -65,16 +72,26 @@
 								</div>
 							</div>
 							<div class="dots__dot-1">
-								<a class="dots__button" href="miami.html">
+								<a class="dots__button" href="alberta.html">
 									<img class="dots__img" src="img/map-marker.svg" alt="" />
 								</a>
 								<div class="dots__card">
-									<div class="dots__number">1</div>
-									<div class="dots__title">Miami</div>
+									<div class="dots__number">2</div>
+									<div class="dots__title1">Alberta</div>
 									<div class="dots__subtitle">
-										Miami, officially the City of Miami, is a coastal metropolis
-										located in Miami-Dade County in southeastern Florida (United
-										States).
+										Alberta is one of the thirteen provinces and territories of Canada. It is part of Western Canada and is one of the three prairie provinces.
+									</div>
+								</div>
+							</div>
+							<div class="dots__dot-2">
+								<a class="dots__button" href="alberta.html">
+									<img class="dots__img" src="img/map-marker.svg" alt="" />
+								</a>
+								<div class="dots__card">
+									<div class="dots__number">3</div>
+									<div class="dots__title1">Alberta</div>
+									<div class="dots__subtitle">
+										Alberta is one of the thirteen provinces and territories of Canada. It is part of Western Canada and is one of the three prairie provinces.
 									</div>
 								</div>
 							</div>
@@ -86,7 +103,7 @@
 	</section>
 	<section class="test"></section>
 	<section class="test"></section>
-	<section class="test1"></section>
+	<!-- Back to top BTN -->
 	<button onclick="document.querySelector('#test').scrollIntoView({ behavior: 'smooth' });" id="#scrollToTop" class="scrolltotop">
 		<picture><source srcset="img/backToTop/up-arrow.webp" type="image/webp"><img class="scrolltotop__arrow" src="img/backToTop/up-arrow.png" alt=""></picture>
 	</button>
@@ -107,7 +124,7 @@
 	</div>
 </div>
  -->
-	<script src="js/app.min.js?_v=20220629235212"></script>
+	<script src="js/app.min.js?_v=20220705222334"></script>
 
 </body>
 

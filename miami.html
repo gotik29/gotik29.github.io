@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220629235212">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220705222334">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,9 +15,11 @@
 <body>
 	<div class="cursor cursor--large"></div>
 	<div class="cursor cursor--small"></div>
-	<div id="page-preloader" class="preloader">
-		<svg class="preloader__container">
-			<circle class="preloader__circle" cx="70" cy="70" r="70" </svg>
+	<div class="loading">
+		<div class="loading__percent">100%</div>
+		<div class="loading__progress-bar">
+			<div class="progress-bar__progress"></div>
+		</div>
 	</div>
 	<div class="wrapper">
 		<header class="header">
@@ -32,6 +34,85 @@
 		</header>
 
 		<main class="page">
+			<div class="description">
+				<div class="description__logo">Miami</div>
+				<p class="description__text">
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat ea
+					eveniet dolor a enim. Repellat reprehenderit aperiam, nesciunt,
+					culpa quisquam alias doloremque possimus aliquid repudiandae
+					laboriosam sapiente, recusandae quis consequuntur!
+				</p>
+			</div>
+
+			<!-- Оболочка слайдера -->
+			<div class="miami__slider swiper">
+				<!-- Двигающееся часть слайдера -->
+				<div class="miami__wrapper swiper-wrapper">
+					<!-- Слайд -->
+					<div class="miami__slide swiper-slide">
+						<picture><source srcset="img/miami/1.webp" type="image/webp"><img src="img/miami/1.jpg" data-swiper-parallax="20%" alt="" class="miami__img" /></picture>
+					</div>
+					<div class="miami__slide swiper-slide">
+						<picture><source srcset="img/miami/2.webp" type="image/webp"><img src="img/miami/2.jpg" data-swiper-parallax="30%" alt="" class="miami__img" /></picture>
+					</div>
+					<div class="miami__slide swiper-slide">
+						<picture><source srcset="img/miami/3.webp" type="image/webp"><img src="img/miami/3.jpg" data-swiper-parallax="20%" alt="" class="miami__img" /></picture>
+					</div>
+					<div class="miami__slide swiper-slide">
+						<picture><source srcset="img/miami/4.webp" type="image/webp"><img src="img/miami/4.jpg" data-swiper-parallax="30%" alt="" class="miami__img" /></picture>
+					</div>
+					<div class="miami__slide swiper-slide">
+						<picture><source srcset="img/miami/5.webp" type="image/webp"><img src="img/miami/5.jpg" data-swiper-parallax="20%" alt="" class="miami__img" /></picture>
+					</div>
+					<div class="miami__slide swiper-slide">
+						<picture><source srcset="img/miami/6.webp" type="image/webp"><img src="img/miami/6.jpg" data-swiper-parallax="30%" alt="" class="miami__img" /></picture>
+					</div>
+					<div class="miami__slide swiper-slide">
+						<picture><source srcset="img/miami/7.webp" type="image/webp"><img src="img/miami/7.jpg" data-swiper-parallax="20%" alt="" class="miami__img" /></picture>
+					</div>
+					<div class="miami__slide swiper-slide">
+						<picture><source srcset="img/miami/8.webp" type="image/webp"><img src="img/miami/8.jpg" data-swiper-parallax="30%" alt="" class="miami__img" /></picture>
+					</div>
+					<div class="miami__slide swiper-slide">
+						<picture><source srcset="img/miami/9.webp" type="image/webp"><img src="img/miami/9.jpg" data-swiper-parallax="20%" alt="" class="miami__img" /></picture>
+					</div>
+				</div>
+			</div>
+
+			<!-- Оболочка слайдера -->
+			<div class="miami1__slider swiper-bg">
+				<!-- Двигающееся часть слайдера -->
+				<div class="miami1__wrapper swiper-wrapper">
+					<!-- Слайд -->
+					<div class="miami1__slide swiper-slide">
+						<picture><source srcset="img/miami/1.webp" type="image/webp"><img src="img/miami/1.jpg" data-swiper-parallax="20%" alt="" class="miami1__img" /></picture>
+					</div>
+					<div class="miami1__slide swiper-slide">
+						<picture><source srcset="img/miami/2.webp" type="image/webp"><img src="img/miami/2.jpg" data-swiper-parallax="30%" alt="" class="miami1__img" /></picture>
+					</div>
+					<div class="miami1__slide swiper-slide">
+						<picture><source srcset="img/miami/3.webp" type="image/webp"><img src="img/miami/3.jpg" data-swiper-parallax="20%" alt="" class="miami1__img" /></picture>
+					</div>
+					<div class="miami1__slide swiper-slide">
+						<picture><source srcset="img/miami/4.webp" type="image/webp"><img src="img/miami/4.jpg" data-swiper-parallax="30%" alt="" class="miami1__img" /></picture>
+					</div>
+					<div class="miami1__slide swiper-slide">
+						<picture><source srcset="img/miami/5.webp" type="image/webp"><img src="img/miami/5.jpg" data-swiper-parallax="20%" alt="" class="miami1__img" /></picture>
+					</div>
+					<div class="miami1__slide swiper-slide">
+						<picture><source srcset="img/miami/6.webp" type="image/webp"><img src="img/miami/6.jpg" data-swiper-parallax="30%" alt="" class="miami1__img" /></picture>
+					</div>
+					<div class="miami1__slide swiper-slide">
+						<picture><source srcset="img/miami/7.webp" type="image/webp"><img src="img/miami/7.jpg" data-swiper-parallax="20%" alt="" class="miami1__img" /></picture>
+					</div>
+					<div class="miami1__slide swiper-slide">
+						<picture><source srcset="img/miami/8.webp" type="image/webp"><img src="img/miami/8.jpg" data-swiper-parallax="30%" alt="" class="miami1__img" /></picture>
+					</div>
+					<div class="miami1__slide swiper-slide">
+						<picture><source srcset="img/miami/9.webp" type="image/webp"><img src="img/miami/9.jpg" data-swiper-parallax="20%" alt="" class="miami1__img" /></picture>
+					</div>
+				</div>
+			</div>
 			<div onclick="scrollToTop()" class="scrolltotop">
 				<picture><source srcset="img/backToTop/up-arrow.webp" type="image/webp"><img class="scrolltotop__arrow" src="img/backToTop/up-arrow.png" alt="" /></picture>
 			</div>
@@ -52,7 +133,7 @@
 	</div>
 </div>
  -->
-	<script src="js/app.min.js?_v=20220629235212"></script>
+	<script src="js/app.min.js?_v=20220705222334"></script>
 
 </body>
 
