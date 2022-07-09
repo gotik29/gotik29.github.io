@@ -529,7 +529,7 @@ body {
   left: 4vw;
   max-width: 24vw;
   line-height: 1.8;
-  transition: opacity 0.75s cubic-bezier(0.2, 0.6, 0, 1), transform 0.75s cubic-bezier(0.2, 0.6, 0, 1);
+  transition: opacity 0.75s cubic-bezier(0.075, 0.5, 0, 1), transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
 }
 .description__logo {
   fontfamily: "Ubuntu";
@@ -542,7 +542,7 @@ body {
 }
 .description__text {
   opacity: 0.8;
-  transition: transform 0.75s cubic-bezier(0.2, 0.6, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
   transition-duration: 3s;
 }
 
@@ -562,7 +562,7 @@ body {
   padding-top: 10vh;
 }
 .miami__wrapper {
-  transition: 0.75s cubic-bezier(0.2, 0.6, 0, 1) !important;
+  transition: 0.75s cubic-bezier(0.075, 0.5, 0, 1) !important;
   overflow: visible;
 }
 .miami__slide {
@@ -575,7 +575,7 @@ body {
   height: 100%;
   width: 400%;
   margin: 0px 0px 0px -150%;
-  transition: 0.75s cubic-bezier(0.2, 0.6, 0, 1) !important;
+  transition: 0.75s cubic-bezier(0.075, 0.5, 0, 1) !important;
 }
 
 .miami1__slider {
@@ -584,7 +584,7 @@ body {
   padding-top: 10vh;
 }
 .miami1__wrapper {
-  transition: 0.75s cubic-bezier(0.2, 0.6, 0, 1) !important;
+  transition: 0.75s cubic-bezier(0.075, 0.5, 0, 1) !important;
   overflow: visible;
 }
 .miami1__slide {
@@ -595,7 +595,7 @@ body {
   height: 100%;
   width: 300%;
   margin: 0px 0px 0px -100%;
-  transition: 0.75s cubic-bezier(0.2, 0.6, 0, 1) !important;
+  transition: 0.75s cubic-bezier(0.075, 0.5, 0, 1) !important;
 }
 
 .swiper-bg {
@@ -604,6 +604,114 @@ body {
   margin-top: -90vh;
   margin-left: -10vh;
   filter: blur(120px) saturate(10);
+}
+
+.Alberta-page {
+  height: 4000px;
+  background-color: #000;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  perspective: 1500px;
+}
+
+.gallery {
+  transform-style: preserve-3d;
+  height: 100%;
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.75s cubic-bezier(0.075, 0.5, 0, 1), opacity 0.75s ease;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 100;
+  text-transform: uppercase;
+  width: min-content;
+  line-height: 1;
+}
+
+.frame h2 {
+  text-align: center;
+  font-size: calc((1vw + 1vh) * 3.3);
+}
+
+.frame-media {
+  position: relative;
+  width: calc((1vw + 1vh) * 26);
+  height: calc((1vw + 1vh) * 36);
+  background-position: center;
+  background-size: cover;
+}
+
+.frame-media_left {
+  right: calc(13 * (1vw + 1vh) + 30px);
+}
+
+.frame-media_right {
+  left: calc(13 * (1vw + 1vh) + 30px);
+}
+
+.frame_bg {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+video.frame-media {
+  width: calc((1vw + 1vh) * 36);
+  height: calc((1vw + 1vh) * 26);
+}
+
+video.frame-media_right {
+  left: calc(18 * (1vw + 1vh) + 30px);
+}
+
+video.frame-media_left {
+  right: calc(18 * (1vw + 1vh) + 30px);
+}
+
+.text-right > * {
+  position: relative;
+  left: 18vw;
+}
+
+.text-left > * {
+  position: relative;
+  right: 18vw;
+}
+
+.frame h3 {
+  font-size: calc((1vw + 1vh) * 3);
+}
+
+.frame p {
+  max-width: 30vw;
+  margin-top: 3vh;
+}
+
+.soundbutton {
+  position: fixed;
+  bottom: 5vh;
+  right: 5vw;
+  width: 24px;
+  transition: 0.25s ease;
+}
+
+.soundbutton.paused {
+  opacity: 0.25;
 }
 
 .active-when-scroll-title {
