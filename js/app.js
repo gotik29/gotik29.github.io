@@ -3683,7 +3683,7 @@
                 freeMode: true,
                 centeredSlides: true,
                 mousewheel: {
-                    sensitivity: 15,
+                    sensitivity: 4,
                     eventsTarget: ".swiper"
                 },
                 parallax: true,
@@ -3710,7 +3710,7 @@
                 centeredSlides: true,
                 parallax: true,
                 mousewheel: {
-                    sensitivity: 15,
+                    sensitivity: 4,
                     eventsTarget: ".swiper-bg"
                 },
                 freeMode: true,
