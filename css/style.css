@@ -140,10 +140,10 @@ body {
 
 .header {
   position: absolute;
+  z-index: 9991;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
   font-family: "Ubuntu", sans-serif;
 }
 .header__content {
@@ -257,7 +257,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgb(21, 21, 21);
-  z-index: 999;
+  z-index: 9999;
   transition: 1s all;
   opacity: 1;
   visibility: visible;
@@ -322,7 +322,7 @@ body {
   left: 0;
   top: 0;
   pointer-events: none;
-  z-index: 11;
+  z-index: 9992;
 }
 .cursor--large {
   --size: 40px;
@@ -412,7 +412,6 @@ body {
   width: 0;
   height: 0;
   position: absolute;
-  font-family: "Raleway", sans-serif;
   left: 24.4%;
   top: 57.5%;
   -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
@@ -426,7 +425,6 @@ body {
   width: 0;
   height: 0;
   position: absolute;
-  font-family: "Raleway", sans-serif;
   left: 16.5%;
   top: 42%;
   -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
@@ -440,74 +438,14 @@ body {
   width: 0;
   height: 0;
   position: absolute;
-  font-family: "Raleway", sans-serif;
-  left: 50%;
-  top: 42%;
+  left: 85.2%;
+  top: 53.7%;
   -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
-.dots__dot-2:hover .dots__card {
+.dots__dot-2:hover .dots__card_left {
   visibility: visible;
   opacity: 1;
-}
-.dots__card {
-  visibility: hidden;
-  width: 330px;
-  height: 320px;
-  border-radius: 15px;
-  padding: 34px 0px 0px 10px;
-  color: #fff;
-  position: absolute;
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity 0.5s;
-  background: rgba(255, 255, 255, 0.1);
-  z-index: 1;
-  top: -100px;
-  margin: 0px 0px 0px 20px;
-}
-.dots__card::after {
-  content: " ";
-  position: absolute;
-  top: 30%;
-  right: 100%;
-  margin-top: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent;
-}
-.dots__number {
-  font-weight: 700;
-  position: absolute;
-  top: 5px;
-  right: -5px;
-  font-size: 7em;
-  padding: 0px 20px 0px 0px;
-  color: rgba(255, 255, 255, 0.4);
-  pointer-events: none;
-}
-.dots__title {
-  font-size: 64px;
-  font-weight: 900;
-  display: inline-block;
-  background: linear-gradient(45deg, #8b008b, tomato, #ee82ee);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  padding: 0px 0px 10px 0px;
-}
-.dots__title1 {
-  font-size: 64px;
-  font-weight: 900;
-  display: inline-block;
-  background: radial-gradient(circle farthest-corner at 10% 20%, rgb(0, 93, 133) 0%, rgb(0, 181, 149) 90%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  padding: 0px 0px 10px 0px;
-}
-.dots__subtitle {
-  font-size: 28px;
-  font-weight: 400;
-  text-align-last: left;
 }
 .dots__img {
   position: absolute;
@@ -516,6 +454,97 @@ body {
   width: 36px;
   height: 36px;
   cursor: none;
+}
+.dots__card {
+  position: relative;
+  width: 370px;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  border-radius: 15px;
+  padding: 15px;
+  color: #fff;
+  box-shadow: 20px 20px 50px rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s;
+  z-index: 1;
+  top: -100px;
+  margin: 0px 0px 0px 20px;
+}
+.dots__card::after {
+  content: " ";
+  position: absolute;
+  top: 33.5%;
+  right: 100%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent;
+}
+.dots__card_left {
+  position: absolute;
+  width: 370px;
+  display: grid;
+  grid-template-rows: 70px 1fr;
+  border-radius: 15px;
+  padding: 15px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 20px 20px 50px rgba(255, 255, 255, 0.05);
+  transition: opacity 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  right: 20px;
+  top: -100px;
+}
+.dots__card_left::after {
+  content: " ";
+  position: absolute;
+  top: 33%;
+  left: 100%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.1);
+}
+
+.card__header {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: 70px;
+}
+.card__title {
+  font-size: 5em;
+  font-weight: 900;
+  background: linear-gradient(45deg, #8b008b, tomato, #ee82ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card__title_Alberta {
+  font-size: 5em;
+  font-weight: 900;
+  background: radial-gradient(circle farthest-corner at 10% 20%, rgb(0, 93, 133) 0%, rgb(0, 181, 149) 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card__title_Honshu {
+  font-size: 5em;
+  font-weight: 900;
+  background: linear-gradient(-45deg, #f492f0 0%, #f9c58d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card__number {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 5em;
+  justify-self: end;
+  color: rgba(255, 255, 255, 0.3);
+}
+.card__text {
+  font-size: 28px;
+  font-weight: 400;
+  text-align: justify;
 }
 
 .test {
@@ -529,7 +558,7 @@ body {
   left: 4vw;
   max-width: 24vw;
   line-height: 1.8;
-  transition: opacity 0.75s cubic-bezier(0.075, 0.5, 0, 1), transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: opacity 0.75s cubic-bezier(0.2, 0.6, 0, 1), transform 0.75s cubic-bezier(0.2, 0.6, 0, 1);
 }
 .description__logo {
   fontfamily: "Ubuntu";
@@ -542,7 +571,7 @@ body {
 }
 .description__text {
   opacity: 0.8;
-  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.2, 0.6, 0, 1);
   transition-duration: 3s;
 }
 
@@ -562,20 +591,19 @@ body {
   padding-top: 10vh;
 }
 .miami__wrapper {
-  transition: 0.75s cubic-bezier(0.075, 0.5, 0, 1) !important;
+  transition: 0.75s cubic-bezier(0.2, 0.6, 0, 1) !important;
   overflow: visible;
 }
 .miami__slide {
   max-height: 75vh;
   overflow: hidden;
-  cursor: pointer;
   width: 40vh;
 }
 .miami__img {
   height: 100%;
   width: 400%;
   margin: 0px 0px 0px -150%;
-  transition: 0.75s cubic-bezier(0.075, 0.5, 0, 1) !important;
+  transition: 0.75s cubic-bezier(0.2, 0.6, 0, 1) !important;
 }
 
 .miami1__slider {
@@ -584,7 +612,7 @@ body {
   padding-top: 10vh;
 }
 .miami1__wrapper {
-  transition: 0.75s cubic-bezier(0.075, 0.5, 0, 1) !important;
+  transition: 0.75s cubic-bezier(0.2, 0.6, 0, 1) !important;
   overflow: visible;
 }
 .miami1__slide {
@@ -595,7 +623,7 @@ body {
   height: 100%;
   width: 300%;
   margin: 0px 0px 0px -100%;
-  transition: 0.75s cubic-bezier(0.075, 0.5, 0, 1) !important;
+  transition: 0.75s cubic-bezier(0.2, 0.6, 0, 1) !important;
 }
 
 .swiper-bg {
@@ -606,9 +634,22 @@ body {
   filter: blur(120px) saturate(10);
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 100;
+  text-transform: uppercase;
+  width: min-content;
+  line-height: 1;
+}
+
 .Alberta-page {
-  height: 4000px;
+  font-size: calc((1vw + 1vh) * 0.8);
+  line-height: 1.75;
+  height: 4500px;
   background-color: #000;
+  font-family: "Raleway", sans-serif;
 }
 
 .container {
@@ -630,24 +671,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.75s cubic-bezier(0.075, 0.5, 0, 1), opacity 0.75s ease;
+  transition: 0.75s cubic-bezier(0.2, 0.6, 0, 1), opacity 0.75s ease;
   will-change: transform;
   transform-style: preserve-3d;
 }
-
-h1,
-h2,
-h3,
-h4 {
-  font-weight: 100;
-  text-transform: uppercase;
-  width: min-content;
-  line-height: 1;
-}
-
 .frame h2 {
   text-align: center;
   font-size: calc((1vw + 1vh) * 3.3);
+}
+.frame h3 {
+  font-size: calc((1vw + 1vh) * 3);
+}
+.frame p {
+  max-width: 30vw;
+  margin-top: 3vh;
+}
+.frame_bg {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .frame-media {
@@ -657,49 +697,31 @@ h4 {
   background-position: center;
   background-size: cover;
 }
-
-.frame-media_left {
-  right: calc(13 * (1vw + 1vh) + 30px);
-}
-
-.frame-media_right {
-  left: calc(13 * (1vw + 1vh) + 30px);
-}
-
-.frame_bg {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-video.frame-media {
+.frame-media video {
   width: calc((1vw + 1vh) * 36);
   height: calc((1vw + 1vh) * 26);
 }
-
-video.frame-media_right {
+.frame-media_left {
+  right: calc(13 * (1vw + 1vh) + 30px);
+}
+.frame-media_left video {
+  right: calc(18 * (1vw + 1vh) + 30px);
+}
+.frame-media_right {
+  left: calc(13 * (1vw + 1vh) + 30px);
+}
+.frame-media_right video {
   left: calc(18 * (1vw + 1vh) + 30px);
 }
 
-video.frame-media_left {
-  right: calc(18 * (1vw + 1vh) + 30px);
-}
-
-.text-right > * {
+.text-right {
   position: relative;
   left: 18vw;
 }
 
-.text-left > * {
+.text-left {
   position: relative;
   right: 18vw;
-}
-
-.frame h3 {
-  font-size: calc((1vw + 1vh) * 3);
-}
-
-.frame p {
-  max-width: 30vw;
-  margin-top: 3vh;
 }
 
 .soundbutton {
@@ -710,10 +732,84 @@ video.frame-media_left {
   transition: 0.25s ease;
 }
 
-.soundbutton.paused {
+.paused {
   opacity: 0.25;
 }
 
+.Honshu-page {
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: none;
+}
+
+.name {
+  text-transform: uppercase;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  letter-spacing: 0.1em;
+  font-size: calc((1vw + 1vh) * 2.8);
+  position: absolute;
+  font-weight: 200;
+  text-align: center;
+  opacity: 0.9;
+  margin-top: 0.2em;
+  cursor: none;
+}
+.name span {
+  display: block;
+  font-family: Helvetica, sans-serif;
+  font-size: calc((1vw + 1vh) * 0.75);
+  margin-top: 5px;
+  cursor: none;
+}
+
+.galery {
+  cursor: none;
+  width: 30vw;
+  column-width: 2em;
+  gap: 0.65em;
+  transform: scale(8.2);
+  will-change: transform;
+  transition: transform 1s cubic-bezier(0.075, 1, 0.25, 1), opacity 1s;
+}
+.galery__item {
+  cursor: none;
+  margin-bottom: 0.65em;
+  transform: scale(1.001);
+  will-change: transform;
+  transition: 0.3s;
+}
+.galery__item:hover {
+  transform: scale(1.03);
+}
+.galery__item img {
+  width: 100%;
+  display: block;
+}
+
+@media (max-width: 47.99875em) {
+  .header {
+    position: relative;
+  }
+
+  .Honshu-page {
+    overflow: scroll;
+    display: block;
+    padding: var(--gap);
+  }
+
+  .gallery {
+    width: 100%;
+    column-width: 10em;
+    transform: scale(1);
+  }
+
+  .gallery__item:hover {
+    transform: scale(1);
+  }
+}
 .active-when-scroll-title {
   -webkit-animation: slide-out-left 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: slide-out-left 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
