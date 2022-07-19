@@ -145,6 +145,7 @@ body {
   left: 0;
   width: 100%;
   font-family: "Ubuntu", sans-serif;
+  cursor: none;
 }
 .header__content {
   max-width: 1200px;
@@ -327,6 +328,11 @@ body {
   -webkit-animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
+@media (max-width: 47.99875em) {
+  .scrolltotop:active {
+    background-color: #0f003f;
+  }
+}
 .scrolltotop:hover {
   background-color: #0f003f;
 }
@@ -425,7 +431,6 @@ body {
 @media (max-width: 47.99875em) {
   .inscription {
     text-align: center;
-    height: 50vh;
   }
 }
 
@@ -835,10 +840,6 @@ h4 {
 }
 
 @media (max-width: 47.99875em) {
-  .header {
-    position: relative;
-  }
-
   .Honshu-page {
     overflow: scroll;
     display: block;
