@@ -501,8 +501,14 @@ body {
   height: 36px;
   cursor: none;
 }
+@media (max-width: 47.99875em) {
+  .dots__img {
+    width: 30px;
+    height: 30px;
+  }
+}
 .dots__card {
-  position: relative;
+  position: absolute;
   width: 370px;
   display: grid;
   grid-template-rows: repeat(2, auto);
