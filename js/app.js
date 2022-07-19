@@ -8917,16 +8917,6 @@
                 backgroundColor: "transparent"
             });
         }
-        let scrollpos0 = window.scrollY;
-        const backToTop = document.querySelector(".scrolltotop");
-        const scrolChange0 = 1100;
-        const add_class_on_scroll_backToTop = () => backToTop.classList.add("active-when-scroll-backToTop");
-        const remove_class_on_scroll_backToTop = () => backToTop.classList.remove("active-when-scroll-backToTop");
-        window.addEventListener("scroll", (function() {
-            scrollpos0 = window.scrollY;
-            console.log(scrollpos0);
-            if (scrollpos0 >= scrolChange0) add_class_on_scroll_backToTop(); else remove_class_on_scroll_backToTop();
-        }));
         let scrollpos = window.scrollY;
         const mainblock__subtitle = document.querySelector(".inscription__subtitle");
         const mainblock__title = document.querySelector(".inscription__title");
@@ -8940,6 +8930,16 @@
             console.log(scrollpos);
             if (scrollpos >= scrolChange) add_class_on_scroll_title(); else remove_class_on_scroll_title();
             if (scrollpos >= scrolChange) add_class_on_scroll_subtitle(); else remove_class_on_scroll_subtitle();
+        }));
+        let scrollpos0 = window.scrollY;
+        const backToTop = document.querySelector(".scrolltotop");
+        const scrolChange0 = 1100;
+        const add_class_on_scroll_backToTop = () => backToTop.classList.add("active-when-scroll-backToTop");
+        const remove_class_on_scroll_backToTop = () => backToTop.classList.remove("active-when-scroll-backToTop");
+        window.addEventListener("scroll", (function() {
+            scrollpos0 = window.scrollY;
+            console.log(scrollpos0);
+            if (scrollpos0 >= scrolChange0) add_class_on_scroll_backToTop(); else remove_class_on_scroll_backToTop();
         }));
         gsapWithCSS.registerPlugin(Draggable, InertiaPlugin_min.InertiaPlugin);
         Draggable.create(".galery", {

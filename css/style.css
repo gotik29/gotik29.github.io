@@ -333,6 +333,11 @@ body {
   background: #fd4679;
   transform: translate(-50%, -50%);
 }
+@media (max-width: 47.99875em) {
+  .cursor {
+    display: none;
+  }
+}
 
 ::selection {
   background-color: #440dfe;
@@ -755,13 +760,6 @@ h4 {
   text-align: center;
   opacity: 0.9;
   margin-top: 0.2em;
-  cursor: none;
-}
-.name span {
-  display: block;
-  font-family: Helvetica, sans-serif;
-  font-size: calc((1vw + 1vh) * 0.75);
-  margin-top: 5px;
   cursor: none;
 }
 
