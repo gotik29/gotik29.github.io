@@ -8825,10 +8825,7 @@
         var per = 16;
         var loading = setInterval(script_animate, 20);
         function script_animate() {
-            if (100 == count && 400 == per) {
-                clearInterval(loading);
-                loading.classList.add("done");
-            } else {
+            if (100 == count && 400 == per) clearInterval(loading); else {
                 per += 4;
                 count += 1;
                 progress.style.width = per + "px";
@@ -8968,59 +8965,13 @@
         }));
         let scrollpos3 = window.scrollY;
         const marker2 = document.querySelector(".dots__dot-2");
-        const marker3 = document.querySelector(".dots__dot-3");
         const scrolChange3 = 1800;
         const add_class_on_scroll_marker2 = () => marker2.classList.add("active-when-scroll-marker1");
         const remove_class_on_scroll_marker2 = () => marker2.classList.remove("active-when-scroll-marker1");
-        const add_class_on_scroll_marker3 = () => marker3.classList.add("active-when-scroll-marker1");
-        const remove_class_on_scroll_marker3 = () => marker3.classList.remove("active-when-scroll-marker1");
         window.addEventListener("scroll", (function() {
             scrollpos3 = window.scrollY;
             console.log(scrollpos3);
             if (scrollpos3 >= scrolChange3) add_class_on_scroll_marker2(); else remove_class_on_scroll_marker2();
-            if (scrollpos3 >= scrolChange3) add_class_on_scroll_marker3(); else remove_class_on_scroll_marker3();
-        }));
-        let scrollpos4 = window.scrollY;
-        const marker4 = document.querySelector(".dots__dot-4");
-        const marker5 = document.querySelector(".dots__dot-5");
-        const scrolChange4 = 1300;
-        const add_class_on_scroll_marker4 = () => marker4.classList.add("active-when-scroll-marker1");
-        const remove_class_on_scroll_marker4 = () => marker4.classList.remove("active-when-scroll-marker1");
-        const add_class_on_scroll_marker5 = () => marker5.classList.add("active-when-scroll-marker1");
-        const remove_class_on_scroll_marker5 = () => marker5.classList.remove("active-when-scroll-marker1");
-        window.addEventListener("scroll", (function() {
-            scrollpos4 = window.scrollY;
-            console.log(scrollpos4);
-            if (scrollpos4 >= scrolChange4) add_class_on_scroll_marker4(); else remove_class_on_scroll_marker4();
-            if (scrollpos4 >= scrolChange4) add_class_on_scroll_marker5(); else remove_class_on_scroll_marker5();
-        }));
-        let scrollpos5 = window.scrollY;
-        const marker6 = document.querySelector(".dots__dot-6");
-        const marker7 = document.querySelector(".dots__dot-7");
-        const scrolChange5 = 1500;
-        const add_class_on_scroll_marker6 = () => marker6.classList.add("active-when-scroll-marker1");
-        const remove_class_on_scroll_marker6 = () => marker6.classList.remove("active-when-scroll-marker1");
-        const add_class_on_scroll_marker7 = () => marker7.classList.add("active-when-scroll-marker1");
-        const remove_class_on_scroll_marker7 = () => marker7.classList.remove("active-when-scroll-marker1");
-        window.addEventListener("scroll", (function() {
-            scrollpos5 = window.scrollY;
-            console.log(scrollpos5);
-            if (scrollpos5 >= scrolChange5) add_class_on_scroll_marker6(); else remove_class_on_scroll_marker6();
-            if (scrollpos5 >= scrolChange5) add_class_on_scroll_marker7(); else remove_class_on_scroll_marker7();
-        }));
-        let scrollpos6 = window.scrollY;
-        const marker8 = document.querySelector(".dots__dot-8");
-        const marker9 = document.querySelector(".dots__dot-9");
-        let scrolChange6 = 1700;
-        const add_class_on_scroll_marker8 = () => marker8.classList.add("active-when-scroll-marker1");
-        const remove_class_on_scroll_marker8 = () => marker8.classList.remove("active-when-scroll-marker1");
-        const add_class_on_scroll_marker9 = () => marker9.classList.add("active-when-scroll-marker1");
-        const remove_class_on_scroll_marker9 = () => marker9.classList.remove("active-when-scroll-marker1");
-        window.addEventListener("scroll", (function() {
-            scrollpos6 = window.scrollY;
-            console.log(scrollpos6);
-            if (scrollpos6 >= scrolChange6) add_class_on_scroll_marker8(); else remove_class_on_scroll_marker8();
-            if (scrollpos6 >= scrolChange6) add_class_on_scroll_marker9(); else remove_class_on_scroll_marker9();
         }));
         let zSpacing = -1e3, lastPos = zSpacing / 5, $frames = document.getElementsByClassName("frame"), script_frames = Array.from($frames), zVals = [];
         window.onscroll = function() {

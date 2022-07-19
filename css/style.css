@@ -148,13 +148,12 @@ body {
 }
 .header__content {
   max-width: 1200px;
+  min-height: 150px;
   margin: 0px auto;
+  padding: 0px 15px;
   display: flex;
-  padding: 0px 30px;
   align-items: center;
   justify-content: space-between;
-  min-height: 166px;
-  max-width: 1390px;
 }
 .header__left {
   font-size: 26px;
@@ -175,8 +174,10 @@ body {
 .header__left:hover span {
   color: #440dfe;
 }
-.header__logo {
-  cursor: none;
+@media (max-width: 47.99875em) {
+  .header__left {
+    font-size: 20px;
+  }
 }
 .header__button {
   cursor: none;
@@ -195,12 +196,12 @@ body {
   text-decoration: none;
   background-color: #0f003f;
 }
-
-@media (max-width: 75em) {
-  .header__content {
-    max-width: 1690px;
+@media (max-width: 47.99875em) {
+  .header__button {
+    font-size: 16px;
   }
 }
+
 /*
 .icon-menu {
 	display: none;
@@ -273,12 +274,23 @@ body {
   font-size: 100px;
   padding: 0px 0px 35px 0px;
 }
+@media (max-width: 47.99875em) {
+  .loading__percent {
+    font-size: 92px;
+  }
+}
 .loading__progress-bar {
   width: 406px;
   height: 10px;
   background: #070707;
   border-radius: 13px;
   box-sizing: border-box;
+}
+@media (max-width: 47.99875em) {
+  .loading__progress-bar {
+    width: 306px;
+    height: 5px;
+  }
 }
 .loading.done {
   opacity: 0;
@@ -290,6 +302,11 @@ body {
   height: 10px;
   background: #fd4679;
   border-radius: 13px;
+}
+@media (max-width: 47.99875em) {
+  .progress-bar__progress {
+    border-radius: 6.5px;
+  }
 }
 
 .scrolltotop {
@@ -312,6 +329,19 @@ body {
 }
 .scrolltotop:hover {
   background-color: #0f003f;
+}
+@media (max-width: 47.99875em) {
+  .scrolltotop {
+    width: 40px;
+    height: 40px;
+    border-radius: 1em;
+  }
+}
+@media (max-width: 47.99875em) {
+  .scrolltotop__arrow {
+    height: 24px;
+    width: 24px;
+  }
 }
 
 .cursor {
@@ -376,6 +406,11 @@ body {
   font-size: 38px;
   font-weight: 700;
 }
+@media (max-width: 47.99875em) {
+  .inscription__text {
+    font-size: 30px;
+  }
+}
 .inscription__title {
   padding: 0px 0px 30px 0px;
   color: #fff;
@@ -386,6 +421,12 @@ body {
   color: #fff;
   -webkit-animation: scale-in-ver-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: scale-in-ver-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@media (max-width: 47.99875em) {
+  .inscription {
+    text-align: center;
+    height: 50vh;
+  }
 }
 
 .main {
