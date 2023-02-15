@@ -3350,8 +3350,7 @@
                 freeMode: true,
                 centeredSlides: true,
                 mousewheel: {
-                    sensitivity: 4,
-                    eventsTarget: ".swiper"
+                    sensitivity: 10
                 },
                 parallax: true,
                 navigation: {
@@ -3377,8 +3376,7 @@
                 centeredSlides: true,
                 parallax: true,
                 mousewheel: {
-                    sensitivity: 4,
-                    eventsTarget: ".swiper-bg"
+                    sensitivity: 10
                 },
                 freeMode: true,
                 breakpoints: {
@@ -8583,7 +8581,7 @@
         setTimeout((() => {
             var loaded = document.querySelector(".loading");
             if (!loaded.classList.contains("done")) loaded.classList.add("done");
-        }), 1e3);
+        }));
     };
     function progressBar() {
         let scroll = document.body.scrollTop || document.documentElement.scrollTop;

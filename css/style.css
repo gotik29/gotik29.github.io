@@ -642,6 +642,9 @@ body {
   transform: translateY(2vh);
 }
 
+.miami {
+  z-index: 9999;
+}
 .miami__slider {
   transform: rotate(15deg);
   height: 100%;
@@ -674,18 +677,18 @@ body {
   overflow: visible;
 }
 .miami1__slide {
-  max-height: 20vh;
+  max-height: 95vh;
   overflow: hidden;
 }
 .miami1__img {
-  height: 50%;
+  height: 100%;
   width: 300%;
   margin: 0px 0px 0px -100%;
   transition: 0.75s cubic-bezier(0.2, 0.6, 0, 1) !important;
 }
 
 .swiper-bg {
-  opacity: 0.6;
+  opacity: 0.15;
   transform: rotate(-20deg) !important;
   margin-top: -90vh;
   margin-left: -10vh;
