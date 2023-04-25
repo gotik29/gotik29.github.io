@@ -1147,6 +1147,13 @@ h4 {
   background-color: #000;
   opacity: 0.4;
 }
+
+.slider__content {
+  max-width: 1200px;
+  font-size: 100px;
+  position: absolute;
+  z-index: 99999;
+}
 .swiper {
   overflow: hidden;
 }

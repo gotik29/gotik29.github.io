@@ -3417,67 +3417,6 @@
             }));
         }
     }), 0);
-    let particles = document.querySelectorAll("canvas.particles"), radius = 1.35, number = 100;
-    particles.forEach((node => {
-        const color = node.dataset.color, ctx = node.getContext("2d"), clr = hexToRgbA(color), width = window.innerWidth, height = window.innerHeight;
-        node.width = width;
-        node.height = height;
-        ctx.fillStyle = clr;
-        let dots = {
-            num: number,
-            distance: 200,
-            d_radius: 200,
-            velocity: -.9,
-            array: []
-        };
-        function Particle() {
-            this.x = Math.random() * width;
-            this.y = Math.random() * height;
-            this.vx = dots.velocity + Math.random();
-            this.vy = dots.velocity + Math.random();
-            this.radius = Math.random() * radius;
-        }
-        Particle.prototype = {
-            create: function() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI, false);
-                ctx.fill();
-            },
-            animate: function() {
-                for (let i = 0; i < dots.num; i++) {
-                    let particle = dots.array[i];
-                    if (particle.x < 0 || particle.x > width) {
-                        particle.vx = -particle.vx;
-                        particle.vy = particle.vy;
-                    } else if (particle.y < 0 || particle.y > height) {
-                        particle.vx = particle.vx;
-                        particle.vy = -particle.vy;
-                    }
-                    particle.x += particle.vx;
-                    particle.y += particle.vy;
-                }
-            }
-        };
-        function createDots() {
-            ctx.clearRect(0, 0, width, height);
-            for (let i = 0; i < dots.num; i++) {
-                dots.array.push(new Particle);
-                particle = dots.array[i];
-                particle.create();
-            }
-            particle.animate();
-        }
-        setInterval(createDots, 1e3 / 30);
-    }));
-    function hexToRgbA(hex) {
-        if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
-            let c = hex.substring(1).split("");
-            if (3 == c.length) c = [ c[0], c[0], c[1], c[1], c[2], c[2] ];
-            c = `0x${c.join("")}`;
-            return `rgba(${[ c >> 16 & 255, c >> 8 & 255, 255 & c ].join(",")}, 1`;
-        }
-        throw new Error("Bad Hex");
-    }
     function _assertThisInitialized(self) {
         if (void 0 === self) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
         return self;
